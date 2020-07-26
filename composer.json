@@ -1,0 +1,13 @@
+{
+    "name": "saifulseip/edu-board3",
+    "description": "this is a learning purpose result calculation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "saiful islam",
+            "email": "saiful01636758237@gmail.com"
+        }
+    ],
+    "require": {}
+}
