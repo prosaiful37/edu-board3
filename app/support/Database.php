@@ -30,6 +30,26 @@
 		}	
 
 
+		/**
+		 * Data check
+		 */
+		public function dataCheck($tbl , $data)
+		{
+
+			$stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE email='$data' || uname='$data' ");
+
+			$stmt -> execute();
+
+			$num  = $stmt -> rowCount();
+
+			return[
+
+				'num'	=>$num,
+				'data'	=>$stmt
+
+			];
+		}
+
 
 
 			
