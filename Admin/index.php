@@ -25,7 +25,7 @@
     <!--[if lt IE 9]> <script src="js/ie/html5shiv.js"></script> <script src="js/ie/respond.min.js"></script> <script src="js/ie/excanvas.js"></script> <![endif]-->
 </head>
 
-<body  class="">
+<body class="">
     
     <?php  
 
@@ -39,11 +39,16 @@
             $pass = $_POST['pass'];
 
 
-            if (empty($email_uname) || empty($pass) ) {
-                $mess = '<p class="alert alert-danger">All fields are required !<button class="close" data-dismiss="alert">&times;</button></p>';
-            }else{
-               $mess = $auth -> userLoginSystem($email_uname, $pass);
+            if ( empty(  $email_uname ) || empty( $pass ) ) {
+                $mess = "<p class=\"alert alert-danger\">All fields are required ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>";
+            }else {
+
+                $mess = $auth -> userLoginSystem($email_uname, $pass);
+
             }
+
+
+
 
         }
 
@@ -53,7 +58,7 @@
     ?>
 
 
-    <section  id="content" class="m-t-lg wrapper-md animated fadeInUp">
+    <section id="content" class="m-t-lg wrapper-md animated fadeInUp">
         <div class="container aside-xl"> <a class="navbar-brand block" href="index.html">Admin - Login</a>
             <hr>
             <?php  
@@ -63,7 +68,7 @@
             ?>
             <section class="m-b-lg">
                 
-                <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" >
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" >
                     <div class="list-group">
                         <div class="list-group-item">
                             <input name="email_uname" type="text" placeholder="Email / Username" class="form-control no-border"> </div>
@@ -72,7 +77,7 @@
                     </div>
                     <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">Log In</button>
                     <div class="line line-dashed"></div>
-                </form>
+                      </form>
 
 
             </section>

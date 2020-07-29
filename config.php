@@ -11,7 +11,7 @@
 	define('DB', 'edu');
 
 
-	// echo password_hash( 'admin', PASSWORD_DEFAULT);
+
 
 
 
