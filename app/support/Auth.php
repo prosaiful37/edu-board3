@@ -55,17 +55,28 @@
 
 
 		/**
-		 * username
+		 * Username 
 		 */
 		public function emailUsernameCheck($email_uname)
 		{
-			return $this -> dataCheck('users', $email_uname);
+			return $this -> dataCheck('users', [
+				'email'		=> $email_uname,
+				'uname'		=> $email_uname,
+			], 'OR' );		
 
-			
 
-			
 		}
-		
+
+
+		/**
+		 * Logout System 
+		 */
+
+		public function userLogout()
+		{
+			session_destroy();
+			header("location:index.php");
+		}
 
 
 	}
